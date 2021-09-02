@@ -5,10 +5,11 @@ import {BsTriangleFill} from "react-icons/bs"
 export const Container = styled.div`
   position: relative;
   min-height: 700px;
-  width: ${(props) => props.width};
+  width: ${({theme}) => theme === 1 ? '100%' : '85%'};
   background-color: black;
   margin: 0 auto;
-  transition: 0.3s all;
+  transition: 1s all;
+  border-radius: ${({theme}) => theme === 1 ? '0' : '10px'};
   h2 {
     color: white;
     font-size: 50px;
@@ -30,6 +31,7 @@ export const BackgroundDiv = styled.div`
   height: 100%;
   z-index: -1;
   border-radius: 10px;
+  transition: 1s all;
 `;
 
 export const Grid = styled.div`

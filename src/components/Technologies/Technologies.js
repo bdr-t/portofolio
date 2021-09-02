@@ -1,9 +1,7 @@
 import {
   Container,
-  Grid,
   Flex,
   IconContainer,
-  ReactI,
 } from "./Technologies.styles";
 import { FaReact, FaGithub } from "react-icons/fa";
 import {SiMongodb, SiPostman, SiCss3, SiSocketDotIo, SiRabbitmq, SiRedux, SiTailwindcss, SiTypescript, SiVisualstudiocode, SiJavascript, SiHtml5, SiNodeDotJs} from "react-icons/si"

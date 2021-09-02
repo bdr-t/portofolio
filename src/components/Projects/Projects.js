@@ -8,25 +8,22 @@ import {
   SeeMoreBtn,
   TriangleBtn,
 } from "./Projects.styles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import sorting from "../../images/sorting-visualizer.png";
 import planets from "../../images/planets.png";
 
 
-const Projects = () => {
-  const [width, setWidith] = useState("85%");
-
-  window.onscroll = function (ev) {
-    if (window.innerHeight > 700) {
-    }
-    if (window.innerHeight + window.pageYOffset >= window.innerHeight) {
-      setWidith("100%");
-    }
-  };
+const Projects = ({change}) => {
+  
+  const [theme, setTheme] = useState(change ? 1 : 0)
+    useEffect(() =>{
+        setTheme(change ? 1 : 0)
+        console.log(change)
+    }, [change])
 
   return (
-    <Container width={width}>
-      {!width === "100%" && <BackgroundDiv />}
+    <Container theme={theme}>
+      {theme === 0 && <BackgroundDiv />}
       <Content>
         <h2>Projects</h2>
         <Grid width="100%" padding="1em">
