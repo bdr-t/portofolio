@@ -7,8 +7,13 @@ export const Container = styled.div`
   gap: 8em;
   height: 500px;
   width: 75%;
-  margin: 80px auto;
-  background-color: ${(props)=> props.background};
+  margin: 80px 0;
+  place-self: center;
+  margin-top: 100px;
+  p{
+    color: ${({theme})=> theme === 1 ? 'white' : 'black'}
+  }
+  transition: 1s all;
 `;
 
 export const AnimationContent = styled.div`
@@ -36,4 +41,14 @@ export const Content = styled.div`
 
 export const ProjectsBtn = styled(ContactBtn)`
     width: fit-content;
+    color: ${({theme})=> theme === 1 ? 'black' : 'white'};
+    background-color: ${({theme})=> theme === 1 ? 'white': 'black'};
+`
+
+export const Section = styled.section`
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: ${({theme})=> theme === 1 ? 'black' : 'white'};
+  margin-bottom: 50px;
 `
