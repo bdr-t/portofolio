@@ -1,8 +1,8 @@
 import {Container, Text} from './Logo.styles'
 
-const Logo = () => {
+const Logo = ({theme}) => {
     return ( 
-        <Container>
+        <Container theme={theme}>
             <Text>BDR</Text>
         </Container>
      );

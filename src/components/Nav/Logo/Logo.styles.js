@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 42px;
   height: 42px;
-  border: 3px solid black;
+  border: 3px solid ${({theme}) => theme === 1 ? 'white' : 'black'};
   background-color: transparent;
   display: grid;
   place-content: center;
