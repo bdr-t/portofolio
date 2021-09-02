@@ -10,15 +10,22 @@ export const Container = styled.div`
   display: flex;
   box-sizing: border-box;
   margin-top: 10px;
-  background-color: white;
+  background-color: ${({theme}) => theme === 1 ? 'black' : 'white'};
   border-radius: 100px;
   width: 85%;
-  margin-left: auto;
-  margin-right: auto;
   padding: 16px 24px;
   align-items: center;
   justify-content: space-between;
   box-shadow: ${(shadow.offsetShadow, shadow.ringShadow, shadow.twShadow)};
+  position: fixed;
+  z-index: 12;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  p{
+    color: ${({theme}) => theme === 1 ? 'white' : 'black'}
+  }
+  transition: 1s all;
 `;
 
 export const NavElement = styled.div`
@@ -29,7 +36,7 @@ export const NavElement = styled.div`
 
 export const ContactBtn = styled.button`
   height: fit-content;
-  background-color: black;
+  background-color: ${({theme}) => theme === 1 ? 'white' : 'black'};
   color: white;
   padding: 8px 24px;
   font-size: 16px;
@@ -37,4 +44,6 @@ export const ContactBtn = styled.button`
   border-radius: 100px;
   outline: none;
   border: none;
+  color: ${({theme}) => theme === 1 ? 'black' : 'white'};
+  transition: 1s all;
 `;

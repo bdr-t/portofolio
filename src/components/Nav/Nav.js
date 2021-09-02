@@ -1,13 +1,20 @@
 import Logo from "./Logo/Logo";
 import { Container,NavElement, ContactBtn } from "./Nav.styles";
-const Nav = () => {
+import {useState, useEffect} from 'react'
+const Nav = ({change}) => {
+    const [theme, setTheme] = useState(change ? 1 : 0)
+    useEffect(() =>{
+        setTheme(change ? 1 : 0)
+        console.log(change)
+    }, [change])
+    
     return ( 
-        <Container>
-            <Logo/>
+        <Container theme={theme}>
+            <Logo theme={theme}/>
             <NavElement>
                 <p>About me</p>
                 <p>Projects</p>
-                <ContactBtn>contact</ContactBtn>
+                <ContactBtn theme={theme}>contact</ContactBtn>
             </NavElement>
 
         </Container>
