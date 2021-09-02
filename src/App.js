@@ -1,10 +1,38 @@
-import './App.css';
-import Logo from './components/Logo/Logo';
+import "./App.css";
+import { useState, useEffect } from "react";
+import Hero from "./components/Hero/Hero";
+import Nav from "./components/Nav/Nav";
+import Projects from "./components/Projects/Projects";
+import Technologies from "./components/Technologies/Technologies";
 
 function App() {
+  const [change, setChange] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    if (position > 600 && position < 850) {
+      setChange(true)
+    }
+    else {
+      setChange(false)
+    }
+  };
+
+
   return (
-    <div className="App">
-      <Logo/>
+    <div className="App" style={{backgroundColor: change ? 'black' : ''}}>
+      <Nav change={change}/>
+      <Hero change={change} />
+      <Projects change={change} />
+      <Technologies change={change} />
     </div>
   );
 }
