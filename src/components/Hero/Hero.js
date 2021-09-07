@@ -14,8 +14,10 @@ const Hero = ({ change }) => {
     <Section theme={theme}>
       <Container theme={theme}>
         <Content>
-          <h1>LOREM LOREM </h1>
-          <p>
+          <h2>Hi! my name is <span> Bader </span> <br />
+          </h2>
+          <h3>I'm a fullstack developer from Barcelona, specializing in JavaScript and MERN stack</h3>
+          {/* <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             nibh felis, finibus vel enim in, aliquet maximus leo. Etiam faucibus
             justo hendrerit, gravida nunc nec, fringilla augue. Pellentesque
@@ -24,10 +26,10 @@ const Hero = ({ change }) => {
             Pellentesque imperdiet lacinia enim id fringilla. Donec vestibulum
             massa dui, non congue ante eleifend non. Donec non elit placerat,
             dapibus turpis nec, maximus purus.
-          </p>
-          <ProjectsBtn theme={theme}>Projects</ProjectsBtn>
+          </p> */}
+          <ProjectsBtn theme={theme}>View my work</ProjectsBtn>
         </Content>
-        <div>
+        <div style={{display: 'grid', placeContent:'center'}}>
           <BackgroundAnimation />
         </div>
       </Container>

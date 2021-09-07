@@ -1,6 +1,6 @@
 
 const BackgroundAnimation = () => (
-    <svg style={{width: '100%'}}
+    <svg style={{width: '400px'}}
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
       fill="none"
