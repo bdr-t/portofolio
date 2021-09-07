@@ -48,7 +48,8 @@ export const Content = styled.div`
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  gap: 2em;
+  column-gap: 2em;
+  row-gap: 3em;
 `;
 
 export const Flex = styled.div`

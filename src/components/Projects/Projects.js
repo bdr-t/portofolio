@@ -11,6 +11,8 @@ import {
 import { useState, useEffect } from "react";
 import sorting from "../../images/sorting-visualizer.png";
 import planets from "../../images/planets.png";
+import minimalReddit from "../../images/minimalReddit.png";
+import memories from "../../images/memories.png";
 
 
 const Projects = ({change}) => {
@@ -44,6 +46,26 @@ const Projects = ({change}) => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh felis, finibus vel enim in, aliquet Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh felis, finibus vel enim in, aliquet</p>
             </Text>
           </Flex>
+
+          <Flex >
+            <img src={minimalReddit} alt="" />
+            <Text>
+              
+            <h3>Minimal reddit</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh felis, finibus vel enim in, aliquet Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh felis, finibus vel enim in, aliquet</p>
+            </Text>
+          </Flex>
+
+          <Flex>
+            <img src={memories} alt="" />
+            <Text>
+              
+            <h3>Memories</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh felis, finibus vel enim in, aliquet Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh felis, finibus vel enim in, aliquet</p>
+            </Text>
+          </Flex>
+
+
         </Grid>
         <SeeMoreBtn>
           See more projects 
