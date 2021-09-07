@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Nav from "./components/Nav/Nav";
 import Projects from "./components/Projects/Projects";
 import Technologies from "./components/Technologies/Technologies";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 function App() {
   const [change, setChange] = useState(false);
@@ -32,6 +33,7 @@ function App() {
       <Nav change={change}/>
       <Hero change={change} />
       <Projects change={change} />
+      <AboutMe/>
       <Technologies change={change} />
     </div>
   );
