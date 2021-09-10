@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import {ContactBtn} from '../Nav/Nav.styles'
+import gradient from '../../images/gradient.svg'
+import gradient2 from '../../images/gradient2.svg'
+import gradient3 from '../../images/gradient3.svg'
 
 export const Container = styled.div`
   display: grid;
@@ -12,6 +15,7 @@ export const Container = styled.div`
   margin-top: 100px;
   h2{
     font-size: 52px;
+    font-weight: 500;
   }
   h3{
     font-size: 24px;
@@ -63,9 +67,13 @@ export const Section = styled.section`
   width: 100%;
   display: grid;
   place-content: center;
-  background-color: ${({theme})=> theme === 1 ? 'black' : ''};
+  background-color: inherit;
   /* background: ${({theme})=> theme === 1 ? '' : 'linear-gradient(180deg, rgb(188,234,246)0%, rgba(255,255,255,1) 100%)'}; */
-  margin-bottom: 35px;
-  margin-top: 35px;
-  height: 600px;
+  padding: 35px 0;
+  height: 80vh;
+  background-image: url(${gradient}), url(${gradient2}), url(${gradient3});
+  background-position: 110% -100px, 80% -100px, 150% -200px;
+  background-repeat: no-repeat;
+  background-size: 700px;
+
 `
