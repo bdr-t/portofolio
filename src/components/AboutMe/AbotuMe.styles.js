@@ -16,4 +16,17 @@ export const Container = styled.div`
       line-height: 160%;
       margin: 20px auto;
   }
+
+
+  @media (max-width: 600px) {
+    h2{
+      font-size: 40px;
+      height: 50px;
+    }
+    p{
+      margin: 15px auto;
+    }
+  }
+
+
 `;
