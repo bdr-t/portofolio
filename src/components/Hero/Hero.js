@@ -10,7 +10,7 @@ import {
 } from "./Hero.styles";
 import { Link } from "react-scroll";
 
-const Hero = ({ isInView }) => {
+const Hero = () => {
 
   return (
     <Section id="hero">

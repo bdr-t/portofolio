@@ -1,24 +1,26 @@
 import Logo from "./Logo/Logo";
-import { Container,NavElement, ContactBtn } from "./Nav.styles";
-import {useState, useEffect} from 'react'
-const Nav = ({change}) => {
-    const [theme, setTheme] = useState(change ? 1 : 0)
-    useEffect(() =>{
-        setTheme(change ? 1 : 0)
-        console.log(change)
-    }, [change])
-    
-    return ( 
-        <Container theme={theme}>
-            <Logo theme={theme}/>
-            <NavElement>
-                <p>About me</p>
-                <p>Projects</p>
-                <ContactBtn theme={theme}>contact</ContactBtn>
-            </NavElement>
+import { Container, NavElement, ContactBtnHover } from "./Nav.styles";
+import { Link } from "react-scroll";
 
-        </Container>
-     );
-}
- 
+const Nav = () => {
+  return (
+    <Container>
+      <Link to="hero" smooth={true} duration={1000}>
+        <Logo />
+      </Link>
+      <NavElement>
+        <Link to="about-me" smooth={true} duration={1000}>
+          <p>About me</p>
+        </Link>
+
+        <Link to="projects" smooth={true} duration={1000} offset={-120}>
+          <ContactBtnHover>Projects</ContactBtnHover>
+        </Link>
+      </NavElement>
+      {/* <HamIcon size={30} onClick={()=> setIsHamburger(!isHamburger)}/>
+            {isHamburger && <Hamburger/>} */}
+    </Container>
+  );
+};
+
 export default Nav;
