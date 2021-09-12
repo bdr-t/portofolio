@@ -1,50 +1,37 @@
 import BackgroundAnimation from "../../BackgroundAnimation";
-import { Container, Content, ProjectsBtn, Section } from "./Hero.styles";
-import { useState, useEffect } from "react";
-import {useAnimation, motion} from 'framer-motion'
+import {
+  Container,
+  Content,
+  ProjectsBtn,
+  Section,
+  Blur,
+  BtnBlurDiv,
+  AnimationDiv,
+} from "./Hero.styles";
+import { Link } from "react-scroll";
 
 const Hero = ({ isInView }) => {
 
-  const sectionAnimation = useAnimation()
-
-  useEffect(()=>{
-    if(isInView){
-      sectionAnimation.start({
-        backgroundColor: 'black',
-        transition: {
-          type:'tween',
-          duration: 0.5,
-        }
-      })
-    }
-
-    if(!isInView){
-      sectionAnimation.start({
-        backgroundColor: 'white',
-        transition: {
-          type:'tween',
-          duration: 0.5,
-        }
-      })
-
-    }
-    
-
-  },[isInView])
-
   return (
-    <Section as={motion.section} animation={sectionAnimation}>
-      <Container >
+    <Section id="hero">
+      <Container>
         <Content>
-          <h2>Hi! My name is <span> Bader </span> <br />
+          <h2>
+            Hi! My name is <span> Bader </span> <br />
           </h2>
-          <h3 >I'm a fullstack developer based in Barcelona, specializing in JavaScript and MERN stack</h3>
-          <a href="#projects"><ProjectsBtn >View my work</ProjectsBtn></a>
-          
+          <h3>
+            I'm a fullstack developer based in Barcelona, specializing in
+            JavaScript and MERN stack
+          </h3>
+          <BtnBlurDiv>
+            <Blur></Blur>
+            <Link to="projects" smooth={true} duration={1000}  offset={-120}> <ProjectsBtn>View my work</ProjectsBtn></Link> 
+            
+          </BtnBlurDiv>
         </Content>
-        <div style={{display: 'grid', placeContent:'center'}}>
+        <AnimationDiv>
           <BackgroundAnimation />
-        </div>
+        </AnimationDiv>
       </Container>
     </Section>
   );
