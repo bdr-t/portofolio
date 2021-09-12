@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   width: 75%;
 
   /* background-color: lightgreen; */
-  margin: 50px auto;
-  padding: 1em;
+  margin: 0 auto;
+  padding: 66px 1em;
 
   h2 {
     font-size: 50px;
@@ -17,11 +16,19 @@ export const Container = styled.div`
     height: 60px;
   }
 
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
   p {
     font-size: 18px;
   }
 
-  img{
+  img {
     width: 50px;
     height: auto;
   }
@@ -52,7 +59,7 @@ export const IconContainer = styled.div`
   place-content: center;
   border: 2px solid #680641;
   border: 2px solid transparent;
-  background-image: linear-gradient(to right,#680641 ,#ea0140),
+  background-image: linear-gradient(to right, #680641, #ea0140),
     linear-gradient(to bottom, #ea0140, #680641),
     linear-gradient(to left, #680641, #ea0140),
     linear-gradient(to top, #ea0140, #680641);
@@ -61,4 +68,3 @@ export const IconContainer = styled.div`
   background-position: top left, top right, bottom right, bottom left;
   background-repeat: no-repeat;
 `;
-
