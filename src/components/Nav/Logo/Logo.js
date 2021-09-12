@@ -1,6 +1,6 @@
 import { Container, Text } from "./Logo.styles";
 
-const Logo = ({ isInView }) => {
+const Logo = () => {
   return (
     <Container>
       <Text>BDR</Text>
