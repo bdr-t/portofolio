@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 42px;
   height: 42px;
-  border: 3px solid ${({theme}) => theme === 1 ? 'white' : 'black'};
+  border: 3px solid rgb(0, 0, 0);
   background-color: transparent;
   display: grid;
   place-content: center;
@@ -13,9 +13,6 @@ export const Container = styled.div`
 export const Text = styled.p`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  /* background: linear-gradient(#250941, #EA0140);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   font-size: 18px;
   color: black;
   margin: 0;
