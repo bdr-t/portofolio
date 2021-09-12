@@ -9,7 +9,7 @@ const Nav = () => {
         <Logo />
       </Link>
       <NavElement>
-        <Link to="about-me" smooth={true} duration={1000}>
+        <Link to="about-me" smooth={true} duration={1000} offset={-120}>
           <p>About me</p>
         </Link>
 
