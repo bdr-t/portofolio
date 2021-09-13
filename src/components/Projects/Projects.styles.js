@@ -95,13 +95,50 @@ export const Flex = styled.div`
     width: 100%;
     display:grid;
   }
-  @media (max-width: 1020px) {
+
+  @media (max-width: 1025px) {
     align-items: center;
     img {
-      max-width: 100%;
+      max-width: 331px;
+      max-height: 196px;
     }
     a{
       max-width: 90%
+    }
+  }
+
+  @media (max-width: 1020px) {
+    img {
+      max-width: 443px;
+      max-height: 263px;
+    }
+  }
+
+  @media (max-width: 737px) {
+    img {
+      max-width: 419px;
+      max-height: 248px;
+    }
+  }
+
+  @media (max-width: 685px) {
+    img {
+      max-width: 379px;
+      max-height: 225px;
+    }
+  }
+
+  @media (max-width: 415px) {
+    img {
+      max-width: 259px;
+      max-height: 154px;
+    }
+  }
+
+  @media (max-width: 376px) {
+    img {
+      max-width: 229px;
+      max-height: 136px;
     }
   }
 `;
@@ -147,9 +184,7 @@ export const SeeMoreBtn = styled.button`
   display: flex;
   gap: 0.5em;
   place-content: center;
-  &:hover{
-    animation: none;
-  }
+  cursor: pointer;
 `;
 
 export const TriangleBtn = styled(BsTriangleFill)`
