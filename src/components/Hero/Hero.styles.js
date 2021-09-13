@@ -89,7 +89,7 @@ export const Section = styled.section`
     padding: 120px 0;
   }
 
-  @media (max-width: 1500px){
+  @media (min-width: 1500px){
     background-position: 100% -70px,80% -50px,130% -180px;
   }
 
