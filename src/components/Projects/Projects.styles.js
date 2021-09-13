@@ -86,10 +86,13 @@ export const Flex = styled.div`
   flex-direction: column;
   gap: 1em;
   img {
-    max-height: 345.425px;
+    max-height: 100%;
+    width: 100%;
+    place-self: center;
   }
   a{
     width: 100%;
+    display:grid;
   }
   @media (max-width: 1020px) {
     align-items: center;

@@ -16,7 +16,7 @@ import memories from "../../images/memories.png";
 import twitch from "../../images/twitch.png";
 import spotify from "../../images/spotify.png";
 
-const Projects = ({ changeTheme }) => {
+const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -48,6 +48,7 @@ const Projects = ({ changeTheme }) => {
                 href="https://sorting-visualizer-sandy.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
+                
               >
                 <img src={sorting} alt="sorting visualizer project" />
               </a>
