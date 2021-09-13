@@ -86,7 +86,7 @@ export const Flex = styled.div`
   flex-direction: column;
   gap: 1em;
   img {
-    max-height: 100%;
+    height: 100%;
     width: 100%;
     place-self: center;
   }

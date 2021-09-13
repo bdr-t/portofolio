@@ -50,6 +50,7 @@ export const ContactBtn = styled.button`
   outline: none;
   border: none;
   color: ${({ theme }) => (theme === 1 ? "black" : "white")};
+  cursor: pointer;
 `;
 
 export const ContactBtnHover = styled(ContactBtn)`
