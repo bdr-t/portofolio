@@ -86,11 +86,12 @@ export const Flex = styled.div`
   flex-direction: column;
   gap: 1em;
   img {
-    height: 100%;
+    height: auto;
     width: 100%;
     place-self: center;
   }
   a{
+    height: fit-content;
     width: 100%;
     display:grid;
   }
